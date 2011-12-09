@@ -18,7 +18,7 @@ public class Cartao {
 	private Double limite;
 	private Date dataExpiracao;
 	
-	@NumberFormat(style = Style.NUMBER, pattern = "##,##")
+	@NumberFormat(style = Style.NUMBER)
 	private Double valor;
 	
 	public Cartao(){
