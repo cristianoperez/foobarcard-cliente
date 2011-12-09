@@ -7,6 +7,9 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
+import org.springframework.format.annotation.NumberFormat;
+import org.springframework.format.annotation.NumberFormat.Style;
+
 @XmlRootElement
 @XmlType(propOrder = { "numeroCartao", "dataExpiracao", "limite", "valor" })
 public class Cartao {
@@ -14,6 +17,8 @@ public class Cartao {
 	private long numeroCartao;
 	private Double limite;
 	private Date dataExpiracao;
+	
+	@NumberFormat(style = Style.NUMBER, pattern = "##,##")
 	private Double valor;
 	
 	public Cartao(){

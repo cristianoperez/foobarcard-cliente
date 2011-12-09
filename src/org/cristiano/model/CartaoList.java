@@ -15,8 +15,5 @@ public class CartaoList {
 
 	public void setDados(List<Cartao> dados) {
 		this.dados = dados;
-	}
-	
-	
+	}	
 }
-
